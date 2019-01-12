@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "User Script Sandbox",
+  "short_name": "User Script Sandbox",
+  "description": "Proof of concept for a user script in an iframed sandbox",
+  "version": "0.0.1",
+  "applications": { "gecko": { "id": "iframe-sandbbox-poc@mozilla.kewis.ch" } },
+
+  "icons": { "16": "images/addon.svg" },
+  "browser_action": { "default_icon": "images/addon.svg" },
+  "background": { "scripts": [ "background.js" ] },
+
+  "content_security_policy": "script-src 'self' 'sha512-L5QkWS2w1WOEShQMQEL00V5NWlj6qUIeinH0lAAd8+yg6vGmI9HYFcA7XdkRHMSbzlkVgsi4NgEOC7X+7FW+xA==' 'unsafe-eval'; object-src 'self'"
+}
